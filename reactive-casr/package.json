@@ -1,0 +1,60 @@
+{
+  "name": "reactive-casr",
+  "version": "1.0.0",
+  "description": "Cross-Chain Automated Stop-Rebalance dApp using Reactive Smart Contracts",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "coverage": "hardhat coverage",
+    "deploy:testnet": "hardhat run scripts/deploy.ts --network lasna-testnet",
+    "deploy:mainnet": "hardhat run scripts/deploy.ts --network reactive-mainnet",
+    "register:testnet": "hardhat run scripts/registerSubscriptions.ts --network lasna-testnet",
+    "register:mainnet": "hardhat run scripts/registerSubscriptions.ts --network reactive-mainnet",
+    "verify:testnet": "hardhat verify --network lasna-testnet",
+    "verify:mainnet": "hardhat verify --network reactive-mainnet",
+    "frontend:dev": "cd frontend && npm run dev",
+    "frontend:build": "cd frontend && npm run build",
+    "frontend:test": "cd frontend && npm run test",
+    "backend:build": "cd backend && npm run build",
+    "backend:test": "cd backend && npm run test",
+    "lint": "solhint contracts/**/*.sol",
+    "format": "prettier --write .",
+    "clean": "hardhat clean && rm -rf frontend/dist backend/dist"
+  },
+  "keywords": [
+    "defi",
+    "reactive-smart-contracts",
+    "cross-chain",
+    "automation",
+    "rebalancing",
+    "ethereum",
+    "react",
+    "typescript"
+  ],
+  "author": "Reactive CASR Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/reactive-casr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/reactive-casr/issues"
+  },
+  "homepage": "https://reactive-casr.com",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@openzeppelin/contracts": "^5.4.0",
+    "@typechain/hardhat": "^9.1.0",
+    "chai": "^6.0.1",
+    "ethers": "^6.15.0",
+    "hardhat": "^3.0.6",
+    "mocha": "^11.7.2",
+    "typechain": "^8.3.2"
+  }
+}
